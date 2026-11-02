@@ -5,11 +5,13 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Managed-Cloud-Detection-Response/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Managed-Cloud-Detection-Response?style=social&color=white" alt="GitHub Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Managed-Cloud-Detection-Response/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Managed-Cloud-Detection-Response?style=social&color=white" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Managed-Cloud-Detection-Response/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Managed-Cloud-Detection-Response/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
   <img src="https://img.shields.io/badge/Maintained%3F-yes-emerald.svg?style=flat-square" alt="Maintenance" />
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 </p>
 
 ---
@@ -36,6 +38,8 @@ This guide is designed for Chief Information Security Officers (CISOs), Cloud Se
 - [🛠️ Open-Source Cloud Detection & Incident Response Projects](#️-open-source-cloud-detection--incident-response-projects)
 - [🔍 Architectural Difference: Managed MDR vs. Self-Hosted CDR](#-architectural-difference-managed-mdr-vs-self-hosted-cdr)
 - [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Sponsorship](#-support--sponsorship)
+- [📈 Star History](#-star-history)
 - [⚖️ Disclaimer & Compliance Notes](#️-disclaimer--compliance-notes)
 
 ---
@@ -116,6 +120,24 @@ Contributions, vendor corrections, and additions of active open-source security 
 2. 🌿 Create a descriptive feature branch: `git checkout -b feature/add-new-cdr-tool`.
 3. 📝 Update `README.md` following the tabular format and add relevant documentation links.
 4. 🚀 Push your changes and submit a clean **Pull Request (PR)**.
+
+---
+
+## 💖 Support & Sponsorship
+
+Thank you for exploring and utilizing this curated guide to Managed Cloud Detection & Response! Building and maintaining comprehensive, up-to-date resources for cloud security engineers takes continuous effort and research.
+
+If you find this repository valuable:
+* ⭐ **Star** this repository on GitHub to help others discover it.
+* 🍴 **Fork** and contribute additions, corrections, or tools.
+* 📢 **Share** it with your security team, peers, and network on LinkedIn / X (Twitter).
+* ☕ **Buy me a coffee**: Support ongoing open-source maintenance and security research directly via the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007).
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Managed-Cloud-Detection-Response&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Managed-Cloud-Detection-Response&type=date&legend=top-left)
 
 ---
 
