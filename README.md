@@ -1,183 +1,132 @@
-# Awesome-Managed-Cloud-Detection-Response
-
-## Top Managed Cloud Detection & Response Ecosystem
-
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on 24/7 Cloud MDR, Cloud-Native Threat Hunting & Self-Hosted CDR Tooling*  
-
-**Last updated: November 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Managed Cloud Detection & Response**. These services and tools enable organizations to detect, investigate, and respond to threats targeting cloud infrastructure—control plane abuse, identity compromise, workload attacks, and data exfiltration—combining cloud-native visibility with human expertise to contain incidents before they spread.
-
-
-
-**Examples** include CrowdStrike Falcon Complete Cloud Security, Wiz MDR (via partners), Arctic Wolf Cloud Detection, Expel Cloud MDR, Palo Alto Unit 42 Managed Cloud, Rapid7 Cloud MDR, eSentire Cloud Security, Sophos Cloud MDR, Red Canary Cloud Defense, and Secureworks Taegis Cloud (the category leaders).
-
-
-
-**Open-source emphasis**: Managed Cloud Detection & Response is a domain where the **"managed" component is fundamentally a human service**—24/7 monitoring by expert analysts who investigate cloud threats on your behalf. No open-source project replicates that service. What open-source *does* provide is **cloud detection and response tooling that organizations can run themselves**: **Dredge** is the strongest active project—a Python CLI for cloud incident response and threat hunting across AWS, Kubernetes, GitHub, and GCP, with CloudTrail hunting across all regions, IAM/EC2/S3 containment actions, and forensics collection . **OpenCDR** provides an open-source, event-driven **Cloud Detection & Response data plane for AWS**, ingesting CloudTrail and GuardDuty events and delivering alerts to Slack, Discord, Email, Security Hub, Jira, or any webhook—with optional automated incident response . The critical caveat: **open-source gives you the tools, not the team**—managed cloud MDR is a service delivered by human analysts, and organizations without dedicated cloud security staff should evaluate MDR providers rather than attempting to self-manage with open-source tools alone.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-products)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[CrowdStrike Falcon Complete Cloud Security](https://www.crowdstrike.com/)**  
-
-  The **first fully managed cloud workload protection solution**, combining Falcon Cloud Security runtime protection with Falcon OverWatch managed threat hunting and the Falcon Complete MDR team . Features: **24/7 follow-the-sun coverage** with cloud defense, DFIR, and threat intelligence experts; **surgical remediation** averaging under 60 minutes to restore systems to pre-intrusion state without reimaging; **multi-cloud visibility** across AWS, Azure, and GCP without agents; and a **Breach Prevention Warranty** . **Best for organizations wanting fully managed cloud detection and response** with a financial guarantee—but it is a premium enterprise service.
-
-
-
-- **[Wiz MDR (via partners)](https://www.wiz.io/)**  
-
-  Wiz itself provides deep, graph-based cloud visibility; its **MDR offering is delivered through partners** like mnemonic (in the Wiz Integration Network) and Red Canary . Wiz surfaces cloud risks, vulnerabilities, identities, and runtime threats; partners operationalize these findings with 24/7 expert monitoring, prioritization, and guided remediation . **Best for organizations already using Wiz** wanting to add managed response through a partner ecosystem.
-
-
-
-- **[Arctic Wolf Cloud Detection](https://arcticwolf.com/)**  
-
-  MDR with **24x7 monitoring across networks, endpoints, identities, and cloud environments** . Integrates with Wiz via GraphQL APIs to ingest Issues, Detections, Cloud Config Findings, Exposed Resources, and Vulnerabilities—correlating cloud signals with endpoint, identity, email, and network telemetry for human-led investigation and prioritization . **Best for organizations wanting cloud detection integrated into broader MDR** with a Concierge Security Team.
-
-
-
-- **[Expel Cloud MDR](https://expel.com/)**  
-
-  MDR with cloud detection and response coverage across AWS, Azure, Google Cloud, and **Oracle Cloud Infrastructure (OCI)** . Features: **cloud-specific detections** tailored to each provider's service architecture and identity model (IAM policy abuse, anomalous API calls, compute misuse, data exfiltration); **AI-powered alert enrichment** linking user activity across the stack; **threat hunting in the cloud control plane**; and resilience recommendations . Expel also integrates with **Google SecOps** for customers using Google's cloud-native security platform . **Best for organizations wanting multi-cloud MDR** with deep cloud expertise—Expel has been securing cloud since its founding .
-
-
-
-- **[Palo Alto Unit 42 Managed Cloud](https://www.paloaltonetworks.com/)**  
-
-  Unit 42's Managed Detection and Response service, delivered as managed services with Cortex XDR/XSIAM as the underlying platform . Covers endpoints, network, cloud, and identity; Unit 42 experts provide 24/7 monitoring, proactive threat hunting, detailed threat reports, and continuous security posture improvement . **Best for Palo Alto Cortex customers** wanting Unit 42's frontline expertise managing their cloud and broader environment .
-
-
-
-- **[Rapid7 Cloud MDR](https://www.rapid7.com/)**  
-
-  Rapid7 MXDR extends SOC coverage into **AWS environments**, with triage, investigation, and response for critical **GuardDuty alerts** directly within the MDR service . Correlates AWS telemetry with global threat intelligence, monitors cloud identities and permissions for anomalous behavior, and provides AI-assisted triage with risk-aware context . **Best for AWS-centric organizations** wanting MDR integrated with Rapid7's CNAPP capabilities.
-
-
-
-- **[eSentire Cloud Security](https://www.esentire.com/)**  
-
-  eSentire's Atlas platform provides **Controlled Autonomy SecOps**, correlating signals across endpoints, network, identity, email, cloud, and SaaS with agentic AI operatives and human experts 24/7 . Features: **autonomous penetration testing** to preempt exposures; **response actions** including TCP disruption, host isolation, and user suspension; **200+ threat protections added daily**; and 95% tier-3 analyst validation alignment . **Best for organizations wanting an offense-informed MDR** that tests defenses proactively.
-
-
-
-- **[Sophos Cloud MDR](https://www.sophos.com/)**  
-
-  Fully managed MDR with an **Agentic SOC** providing 24/7 monitoring, threat hunting, and response across cloud infrastructure and workloads . **52% of cases resolved end-to-end by AI in an average of 89 seconds**, with human analysts overseeing AI and validating outcomes . Response modes include **Authorize** (Sophos handles containment), **Collaborate** (joint response), and **Notify Only** . **Best for Sophos customers** wanting cloud MDR with transparent AI/human collaboration.
-
-
-
-- **[Red Canary Cloud Defense](https://redcanary.com/)**  
-
-  MDR for cloud workloads, identities, SaaS applications, networks, and endpoints . Integrates with Wiz to investigate, enrich, and validate cloud security insights with **24x7 expert investigation**, correlating cloud threat data with endpoints, identities, and other domains . Provides validated, fully scoped threat detections with tailored response and remediation guidance . **Best for organizations wanting cloud MDR with deep cross-domain correlation**—nearly 1,000 organizations rely on Red Canary for MDR .
-
-
-
-- **[Secureworks Taegis Cloud MDR](https://www.secureworks.com/)**  
-
-  Taegis ManagedXDR with cloud coverage across AWS, Azure, GCP, and identity providers . Features: **24x7 threat monitoring, detection, investigation, and unlimited response**; 350+ integrations; 1-year data retention; **1 minute median time to detect, 5 minutes to remediate**; and **<90 second access to security analysts** via the Taegis console . Tiers include MDR, MDR Plus, and MDR Enhanced with additional investigation context and governance . **Best for organizations wanting a mature, open XDR-based MDR** with fast analyst access .
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Cloud Incident Response & Hunting CLIs (Dredge)
-
-
-
-- **[Dredge](https://pypi.org/project/dredge-ir/)**  
-
-  The **most capable open-source cloud incident-response and threat-hunting toolkit** available (Python library + CLI, `pip install dredge-ir`) . Supports **AWS, Kubernetes, GitHub, and GCP** (in progress) . **Killer feature**: **CloudTrail hunting across every enabled AWS region concurrently**—`LookupEvents` is a regional API, so a normal search only sees one region; Dredge fans out to all regions and merges results into one time-sorted timeline . Features: **AWS forensics** (S3 log collection, snapshots, flow logs); **AWS containment** (IAM, EC2, RDS, ECS, S3, Lambda, KMS); **Kubernetes hunt and containment** (RBAC, pods, nodes, NetworkPolicy); **GitHub audit-log hunting and containment**; and **baseline-deviation hunts** (e.g., flag events from IPs outside an allowlist) . **Best for incident responders and cloud security engineers** wanting scriptable, fast cloud IR—but it is a toolkit, not a managed service.
-
-
-
-### Cloud Detection & Response Platforms (OpenCDR)
-
-
-
-- **[OpenCDR](https://github.com/dbnz-io/opencdr)**  
-
-  An **open-source, event-driven Cloud Detection & Response data plane for AWS** . One deployment protects one AWS account: ingests **CloudTrail and GuardDuty events**, evaluates configurable rules, correlates activity, and delivers alerts to **Slack, Discord, Email, AWS Security Hub, Jira, or any HTTPS webhook**—with **optional automated incident response** . Deploys via Serverless Framework (Node.js/Python); requires CloudTrail enabled for EventBridge event delivery . **Critical caveat**: automated response rules load with `response_module` stripped by default—you must explicitly review and arm them with `--with-response-modules` before they can take destructive action . **Best for AWS-centric organizations** wanting a self-hosted CDR foundation—but it is per-account infrastructure requiring deployment and rule tuning.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Wazuh** — Open-source SIEM/XDR platform (GPLv2) with cloud workload agents and log analysis; can ingest cloud audit logs (CloudTrail, Azure Activity Logs, GCP Audit Logs) for detection . **Best for organizations wanting a unified SIEM foundation** that includes cloud telemetry—but it is not cloud-native CDR and requires significant tuning.
-
-- **Prowler** — Open-source cloud security posture management (CSPM) tool for AWS, Azure, and GCP; **not a detection and response platform**, but useful for identifying misconfigurations and compliance gaps that CDR tools can then monitor . **Best for posture assessment** as a complement to CDR.
-
-
-
-**Frameworks for building custom systems**: For **cloud incident response and hunting across AWS/K8s/GitHub**, Dredge provides the most capable open-source toolkit . For **event-driven cloud detection and response on AWS**, OpenCDR provides a deployable data plane . **No open-source project provides managed cloud detection and response**—that is a human service. Organizations requiring 24/7 cloud MDR should evaluate CrowdStrike Falcon Complete Cloud Security, Expel, Red Canary, Arctic Wolf, or other MDR providers rather than attempting to self-manage with open-source tools alone.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Managed cloud detection and response platforms handling cloud telemetry must comply with organizational security policies and privacy regulations; **self-hosted CDR tools require skilled operators**—Dredge and OpenCDR are powerful but demand cloud security expertise to configure and interpret.
-
-- **Open-source cannot replicate managed cloud detection and response**—managed cloud MDR is a service delivered by human analysts 24/7 (CrowdStrike OverWatch, Expel SOC, Red Canary experts) . Open-source provides **tools (Dredge, OpenCDR)** but not the human expertise and continuous monitoring that define managed CDR. **OpenCDR's automated response is disabled by default** for good reason—arming it without review can cause destructive actions . Organizations without dedicated cloud security staff should evaluate MDR providers.
-
-- Verify license terms for commercial use; Dredge is a PyPI package (check license) , and OpenCDR is open-source (check repository).
-
-
+# ☁️ Awesome Managed Cloud Detection & Response (CDR / MDR) 🛡️
+
+<p align="center">
+  <img src="./assets/banner.svg" alt="Awesome Managed Cloud Detection and Response Banner" width="100%" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Managed-Cloud-Detection-Response/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Managed-Cloud-Detection-Response?style=social&color=white" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Managed-Cloud-Detection-Response/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Managed-Cloud-Detection-Response?style=social&color=white" alt="GitHub Forks" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Managed-Cloud-Detection-Response/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Managed-Cloud-Detection-Response/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
+  <img src="https://img.shields.io/badge/Maintained%3F-yes-emerald.svg?style=flat-square" alt="Maintenance" />
+</p>
 
 ---
 
+## 🧭 Executive Summary & Focus
 
+A curated directory and vendor guide for **Managed Cloud Detection & Response (Cloud MDR / CDR)** platforms, SOC services, and companion open-source threat hunting utilities.
 
-**Made for cloud security architects, incident responders, and organizations choosing their managed cloud detection and response strategy.**  
+This guide is designed for Chief Information Security Officers (CISOs), Cloud Security Architects, and SecOps Leads seeking 24/7 proactive threat monitoring, control plane abuse prevention, Kubernetes runtime defense, and rapid incident containment across **AWS**, **Microsoft Azure**, **Google Cloud Platform (GCP)**, and hybrid architectures.
 
-Let's make cloud detection and response more open at the tooling layer, but with clear eyes about the human expertise and 24/7 monitoring that managed services uniquely provide.
+---
+
+## 📊 Sector Overview & Market Dynamics
+
+> 📈 **Market Size & Growth**: The global Managed Detection and Response (MDR) market is valued at approximately **$5.1B to $6.2B in 2025–2026** and is projected to expand to **$17.6B–$19.8B by 2032**, demonstrating an accelerated compound annual growth rate (CAGR) of **~21.4%**.
+>
+> 🧩 **Market Concentration & Structure**: The sector is **moderately to highly fragmented** rather than a winner-take-all monopoly. Competition is split dynamically across pure-play MDR specialists (e.g., Arctic Wolf, Expel, eSentire), hyper-growth cloud security platforms (e.g., Wiz), and consolidated endpoint/network security conglomerates (e.g., Palo Alto Networks, CrowdStrike, Sophos).
+
+---
+
+## 📑 Table of Contents
+- [📊 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [🏢 Enterprise SaaS & Managed Cloud Detection Providers](#-enterprise-saas--managed-cloud-detection-providers)
+- [🛠️ Open-Source Cloud Detection & Incident Response Projects](#️-open-source-cloud-detection--incident-response-projects)
+- [🔍 Architectural Difference: Managed MDR vs. Self-Hosted CDR](#-architectural-difference-managed-mdr-vs-self-hosted-cdr)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [⚖️ Disclaimer & Compliance Notes](#️-disclaimer--compliance-notes)
+
+---
+
+## 🏢 Enterprise SaaS & Managed Cloud Detection Providers
+
+Below is a detailed comparison of market-leading managed cloud detection and response providers, sorted in descending order by **Company Scale (Market Capitalization / Enterprise Valuation)**.
+
+| 🏢 Provider | 📈 Company Scale (Valuation / Market Cap) | 💵 Starting Tier Pricing | 🎁 Free Tier / Free Trial Limits | 🛡️ Core Cloud Detection & Response Focus |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Palo Alto Unit 42 Managed Cloud](https://www.paloaltonetworks.com/)** | **~$275B–$320B** Market Cap *(PANW, FY26 Rev: ~$11.5B)* | **~$10.00 – $15.00** per endpoint/mo (Software base); MDR packages custom quoted | **30-Day Guided PoC** (Virtual sandbox lab environment with demo data via authorized partners) | Frontline SOC triage, Cortex XDR/XSIAM integration, and Unit 42 proactive control-plane threat hunting across AWS, Azure, and GCP. |
+| **[CrowdStrike Falcon Complete Cloud Security](https://www.crowdstrike.com/)** | **~$250B–$270B** Market Cap *(CRWD, FY26 Rev: ~$4.8B)* | **~$184.99** per device/year (~$19.99/mo) for Falcon Enterprise tier; Complete MDR priced via private quote | **15-Day Free Trial** (Full access to Falcon Prevent NGAV, Device Control, and cloud trial modules for up to 100 endpoints) | 24/7 OverWatch threat hunting, sub-60-minute surgical host remediation, agentless multi-cloud visibility, and $1M Breach Prevention Warranty. |
+| **[Wiz MDR (via partners)](https://www.wiz.io/)** | **$32B** Valuation *(Acquired by Google/Alphabet; $1B+ ARR)* | **~$24,000 / year** (Wiz Essential via AWS Marketplace, covering 100 cloud workloads) | **14-Day Free Trial** (Full agentless scanning across 1 connected cloud account with interactive cloud security graph) | Graph-based cloud risk correlation combined with 24/7 human SOC operationalization through the Wiz Integration Network (WIN). |
+| **[Arctic Wolf Cloud Detection](https://arcticwolf.com/)** | **$4.3B** Valuation *(Series F; ~$400M–$450M ARR)* | **~$8.00 – $18.00** per user/workload per month (~$100–$220/yr, ~$24K annual SMB minimum) | **30-Day Virtual Concierge Assessment** (Scattered telemetry ingestion & threat posture evaluation with sales engineer review) | Dedicated Concierge Security Team (CST), multi-cloud log monitoring (CloudTrail, Azure Activity, GCP), and cross-domain correlation. |
+| **[Sophos Cloud MDR](https://www.sophos.com/)** | **$3.9B** Valuation *(Acquired by Thoma Bravo; ~$1B+ Revenue)* | **~$10.00 – $20.00** per endpoint/mo (~$120–$240/yr for MDR Complete tier) | **30-Day Free Trial** (Unrestricted trial of Sophos Central & Intercept X Advanced with XDR; MDR human SOC demo upon request) | Agentic SOC architecture where 52% of alerts are resolved in <90 seconds with human analyst containment and customizable response modes. |
+| **[Expel Cloud MDR](https://expel.com/)** | **$1.0B** Valuation *(Series E Unicorn; ~$100M–$140M ARR)* | **~$11,600 / year** (Starting enterprise block for ~125 assets/workloads) | **14-Day Custom PoC** (Live integration pilot in staging or production with automated alert enrichment) | Tool-agnostic managed security across AWS, Azure, GCP, and OCI; native control-plane hunting (IAM abuse, API hijacking, and bucket misconfigurations). |
+| **[eSentire Cloud Security](https://www.esentire.com/)** | **$1.0B+** Valuation *(Warburg Pincus backed unicorn; ~$165M Rev)* | **~$12.00 – $18.00** per workload/mo (Typically requires a minimum contract baseline of ~$15,000/yr) | **30-Day Threat Exposure Assessment** (Cloud posture audit and guided SOC telemetry correlation demonstration) | Controlled Autonomy SecOps combining agentic AI operatives with human threat analysts, rapid TCP disruption, and automated user suspension. |
+| **[Rapid7 Cloud MDR](https://www.rapid7.com/)** | **~$850M–$1.1B** Market Cap *(NASDAQ: RPD; ~$700M+ Revenue)* | **~$15.00 – $22.00** per asset/month (Managed Threat Complete tier with a 500-asset minimum baseline) | **30-Day Free Trial** (Full evaluation of InsightIDR & InsightCloudSec platform; live MXDR triage requires partner onboarding) | Deep AWS GuardDuty & CloudTrail triage, integrated CNAPP posture management, and behavioral analytics on privileged cloud identities. |
+| **[Secureworks Taegis Cloud MDR](https://www.secureworks.com/)** | **$859M** Acquisition Valuation *(Acquired by Sophos / Thoma Bravo)* | **~$120.00 – $220.00** per protected host/endpoint per year (~$10–$18.33/mo) | **30-Day Free Trial** (Taegis XDR platform trial with 350+ data connectors enabled; MDR SOC analyst access upon qualification) | Open-XDR architecture, sub-minute median detection times, 5-minute remote incident remediation, and live security analyst chat in <90 seconds. |
+| **[Red Canary Cloud Defense](https://redcanary.com/)** | **$675M** Acquisition Valuation *(Acquired by Zscaler; ~$140M ARR)* | **~$12.00 – $16.00** per endpoint/workload per month (~$144–$192/yr, billed annually) | **30-Day Proof of Value (PoV)** (Full telemetry ingestion on up to 250 assets with dedicated incident response analyst support) | Cross-domain alert validation, multi-cloud runtime telemetry correlation, and mapped MITRE ATT&CK cloud sub-technique containment. |
+
+---
+
+## 🛠️ Open-Source Cloud Detection & Incident Response Projects
+
+Open-source CDR projects provide self-hosted telemetry pipelines, detection rulesets, runtime agents, and forensic hunt utilities. 
+
+The repositories below are sorted in descending order by **GitHub Star Count**. Click on any star badge to view real-time stargazers.
+
+| 📦 Repository & Project | ⭐ GitHub Stars | 💻 Primary Language | 🎯 Key Cloud Detection, IR & Posture Capabilities |
+| :--- | :--- | :--- | :--- |
+| **[osquery/osquery](https://github.com/osquery/osquery)** | [![Stars](https://img.shields.io/github/stars/osquery/osquery?style=social&color=white)](https://github.com/osquery/osquery/stargazers) | C++ | SQL-powered operating system instrumentation framework. Highly effective for querying cloud virtual machines, containers, and serverless hosts as a relational database for live security auditing and intrusion detection. |
+| **[wazuh/wazuh](https://github.com/wazuh/wazuh)** | [![Stars](https://img.shields.io/github/stars/wazuh/wazuh?style=social&color=white)](https://github.com/wazuh/wazuh/stargazers) | C / Python | Open-source SIEM/XDR engine offering security monitoring, cloud audit log analysis (AWS CloudTrail, Azure Monitor, GCP Audit), threat detection, file integrity monitoring (FIM), and automated response scripts. |
+| **[prowler-cloud/prowler](https://github.com/prowler-cloud/prowler)** | [![Stars](https://img.shields.io/github/stars/prowler-cloud/prowler?style=social&color=white)](https://github.com/prowler-cloud/prowler/stargazers) | Python | Cloud Security Posture Management (CSPM) and compliance assessment tool for AWS, Azure, GCP, and Kubernetes. Essential baseline for auditing configurations before wiring up CDR alerting. |
+| **[elastic/beats](https://github.com/elastic/beats)** | [![Stars](https://img.shields.io/github/stars/elastic/beats?style=social&color=white)](https://github.com/elastic/beats/stargazers) | Go | Lightweight data shippers including `Cloudbeat` and `Auditbeat`. Ships cloud runtime events, CIS benchmark audits, and Kubernetes control-plane telemetry to OpenSearch or Elasticsearch clusters. |
+| **[falcosecurity/falco](https://github.com/falcosecurity/falco)** | [![Stars](https://img.shields.io/github/stars/falcosecurity/falco?style=social&color=white)](https://github.com/falcosecurity/falco/stargazers) | C++ / eBPF | The de facto cloud-native runtime security tool and CNCF graduated project. Monitors Linux kernel system calls via eBPF to detect unexpected application behavior, shell spawns, and privilege escalations in Kubernetes. |
+| **[open-telemetry/opentelemetry-collector](https://github.com/open-telemetry/opentelemetry-collector)** | [![Stars](https://img.shields.io/github/stars/open-telemetry/opentelemetry-collector?style=social&color=white)](https://github.com/open-telemetry/opentelemetry-collector/stargazers) | Go | Vendor-agnostic proxy to ingest, transform, and route security events, cloud metrics, and audit logs to upstream SIEM and CDR analysis pipelines. |
+| **[Netflix/dispatch](https://github.com/Netflix/dispatch)** | [![Stars](https://img.shields.io/github/stars/Netflix/dispatch?style=social&color=white)](https://github.com/Netflix/dispatch/stargazers) | Python | All-in-one incident management and orchestration framework built by Netflix. Streamlines cloud security incident triage, automates team notifications, syncs Slack/Jira/Google Docs, and structures remediation workflows. |
+| **[cloud-custodian/cloud-custodian](https://github.com/cloud-custodian/cloud-custodian)** | [![Stars](https://img.shields.io/github/stars/cloud-custodian/cloud-custodian?style=social&color=white)](https://github.com/cloud-custodian/cloud-custodian/stargazers) | Python | Rules engine for cloud security, governance, and real-time event-driven remediation. Listens to AWS EventBridge and Azure Event Grid to instantly terminate unauthorized infrastructure or revoke IAM permissions. |
+| **[aquasecurity/tracee](https://github.com/aquasecurity/tracee)** | [![Stars](https://img.shields.io/github/stars/aquasecurity/tracee?style=social&color=white)](https://github.com/aquasecurity/tracee/stargazers) | Go / C | eBPF-powered container runtime security and forensic data-collection engine. Detects suspicious behavioral patterns in cloud workloads and streams forensic telemetry in real time. |
+| **[BishopFox/cloudfox](https://github.com/BishopFox/cloudfox)** | [![Stars](https://img.shields.io/github/stars/BishopFox/cloudfox?style=social&color=white)](https://github.com/BishopFox/cloudfox/stargazers) | Go | Command-line tool designed for proactive threat hunters and penetration testers to discover exploitable attack paths, over-permissioned IAM roles, and exposed data stores in cloud environments. |
+| **[panther-labs/panther-analysis](https://github.com/panther-labs/panther-analysis)** | [![Stars](https://img.shields.io/github/stars/panther-labs/panther-analysis?style=social&color=white)](https://github.com/panther-labs/panther-analysis/stargazers) | Python | Open-source detection-as-code library containing production-ready rules for AWS CloudTrail, GuardDuty, GCP Audit Logs, Okta, and Kubernetes audit logs. |
+| **[dbnz-io/dredge](https://github.com/dbnz-io/dredge)** | [![Stars](https://img.shields.io/github/stars/dbnz-io/dredge?style=social&color=white)](https://github.com/dbnz-io/dredge/stargazers) | Python | Advanced CLI toolkit (`pip install dredge-ir`) built specifically for cloud IR. Concurrently queries AWS CloudTrail across all regions, builds unified chronological incident timelines, and executes automated IAM/S3 containment. |
+| **[dbnz-io/opencdr](https://github.com/dbnz-io/opencdr)** | [![Stars](https://img.shields.io/github/stars/dbnz-io/opencdr?style=social&color=white)](https://github.com/dbnz-io/opencdr/stargazers) | Python / JS | Serverless event-driven Cloud Detection & Response data plane for AWS. Ingests CloudTrail and GuardDuty events via EventBridge and pushes alerts with optional auto-response modules to Slack, Discord, and Webhooks. |
+
+---
+
+## 🔍 Architectural Difference: Managed MDR vs. Self-Hosted CDR
+
+```
+               ┌────────────────────────────────────────────────────────┐
+               │           Cloud Telemetry & Audit Logs                 │
+               │   (AWS CloudTrail, Azure Activity, GCP Audit, K8s)      │
+               └───────────────────────────┬────────────────────────────┘
+                                           │
+                    ┌──────────────────────┴──────────────────────┐
+                    ▼                                             ▼
+     ┌─────────────────────────────┐               ┌─────────────────────────────┐
+     │  Open-Source CDR Tooling    │               │    Managed Cloud MDR SOC    │
+     │  (Falco, Dredge, OpenCDR)   │               │ (CrowdStrike, Expel, Wiz)   │
+     ├─────────────────────────────┤               ├─────────────────────────────┤
+     │ • Free software licenses    │               │ • 24/7/365 Human SOC eyes   │
+     │ • In-house alert triage     │               │ • SLA-backed containment    │
+     │ • Operator writes rules     │               │ • Cross-customer intel      │
+     │ • Risk of alert fatigue     │               │ • Dedicated DFIR escalations│
+     └─────────────────────────────┘               └─────────────────────────────┘
+```
+
+> ⚠️ **Key Takeaway**: Open-source provides **tooling**, while Managed Detection & Response delivers a **team**. If your organization does not maintain dedicated 24/7 internal cloud incident responders, relying solely on open-source tools will create unmonitored alert backlogs.
+
+---
+
+## 🤝 How to Contribute
+
+Contributions, vendor corrections, and additions of active open-source security tools are very welcome!
+
+1. 🍴 **Fork** this repository.
+2. 🌿 Create a descriptive feature branch: `git checkout -b feature/add-new-cdr-tool`.
+3. 📝 Update `README.md` following the tabular format and add relevant documentation links.
+4. 🚀 Push your changes and submit a clean **Pull Request (PR)**.
+
+---
+
+## ⚖️ Disclaimer & Compliance Notes
+
+* 📌 This repository is a community-curated list maintained for educational, architectural, and evaluation purposes.
+* 🛡️ Deployment of cloud security tools and SOC integrations must conform to internal corporate governance, data privacy standards (GDPR, HIPAA, SOC 2), and cloud provider acceptable use policies.
+* ⚠️ Always thoroughly test automated containment modules in staging environments prior to arming production response automation.
+
+---
+
+<p align="center">
+  <b>⭐ Star this repository if it helps streamline your cloud defense strategy! ⭐</b>
+</p>
