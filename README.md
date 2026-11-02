@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Managed-Cloud-Detection-Response/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Managed-Cloud-Detection-Response?style=social&color=white" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Managed-Cloud-Detection-Response/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Managed-Cloud-Detection-Response?style=social&color=white" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Managed-Cloud-Detection-Response/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Managed-Cloud-Detection-Response?style=social&color=white" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Managed-Cloud-Detection-Response/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Managed-Cloud-Detection-Response/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
@@ -67,9 +67,9 @@ Below is a detailed comparison of market-leading managed cloud detection and res
 
 Open-source CDR projects provide self-hosted telemetry pipelines, detection rulesets, runtime agents, and forensic hunt utilities. 
 
-The repositories below are sorted in descending order by **GitHub Star Count**. Click on any star badge to view real-time stargazers.
+The repositories below are sorted in descending order by **GitHub Stars_Count**. Click on any Stars_Badge to view real-time stargazers.
 
-| 📦 Repository & Project | ⭐ GitHub Stars | 💻 Primary Language | 🎯 Key Cloud Detection, IR & Posture Capabilities |
+| 📦 Repository & Project | ⭐ GitHub_Stars | 💻 Primary Language | 🎯 Key Cloud Detection, IR & Posture Capabilities |
 | :--- | :--- | :--- | :--- |
 | **[osquery/osquery](https://github.com/osquery/osquery)** | [![Stars](https://img.shields.io/github/stars/osquery/osquery?style=social&color=white)](https://github.com/osquery/osquery/stargazers) | C++ | SQL-powered operating system instrumentation framework. Highly effective for querying cloud virtual machines, containers, and serverless hosts as a relational database for live security auditing and intrusion detection. |
 | **[wazuh/wazuh](https://github.com/wazuh/wazuh)** | [![Stars](https://img.shields.io/github/stars/wazuh/wazuh?style=social&color=white)](https://github.com/wazuh/wazuh/stargazers) | C / Python | Open-source SIEM/XDR engine offering security monitoring, cloud audit log analysis (AWS CloudTrail, Azure Monitor, GCP Audit), threat detection, file integrity monitoring (FIM), and automated response scripts. |
